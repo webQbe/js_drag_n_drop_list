@@ -16,3 +16,10 @@ const richestPeople = [
     'Amancio Ortega'
 ];
 
+// Define Globals
+const listItems = []; // Store list items
+let dragStartIndex; // Keep track of each list item's index
+
+
+
+
