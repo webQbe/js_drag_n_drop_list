@@ -142,3 +142,9 @@ function dragDrop(){
     //console.log('Event: ', 'drop')
 }
 
+
+function swapPositions(fromIndex, toIndex){
+
+    console.log('123');
+
+}
