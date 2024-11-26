@@ -83,25 +83,50 @@ function addEventListeners(){
     });
 }
 
-function dragStart(){console.log('Event: ', 'dragstart')}
+function dragStart(){
+
+    // Get current element's data-index
+    // To update dragStartIndex
+    dragStartIndex = +this // + sign converts string to int
+                    .closest('li').getAttribute('data-index'); /* Why .closest() is used:
+
+                        Find the relevant ancestor: 
+                        The draggable element itself does not have the data-index attribute, but its nearest ancestor <li> does. .closest('li') ensures the method looks upward in the DOM hierarchy to find that <li> element.
+                        
+                        Dynamic structure: 
+                        In many drag-and-drop implementations, draggable elements are wrapped in containers like <li>. The .closest() method dynamically identifies the appropriate parent container, making the code more adaptable to structural changes.
+                        
+                        Context for operation: 
+                        The data-index attribute is essential for identifying the order or position of the item being dragged. By retrieving it from the <li>, the code can track and manipulate the correct item during the drag-and-drop process. */
+                    
+    console.log(dragStartIndex);
+
+    console.log('Event: ', 'dragstart');
+
+}
+
 
 function dragEnter(){
 
-    console.log('Event: ', 'dragenter')
-
     // Add .over class to <li> element
     this.classList.add('over');
+
+    console.log('Event: ', 'dragenter')
+
 }
 
 function dragOver(){console.log('Event: ', 'dragover')}
 
-function dragLeave(){
 
-    console.log('Event: ', 'dragleave')
+function dragLeave(){
 
     // Remove .over class from <li> element
     this.classList.remove('over');
+
+    console.log('Event: ', 'dragleave')
+
 }
+
 
 function dragDrop(){console.log('Event: ', 'drop')}
 
