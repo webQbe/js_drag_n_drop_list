@@ -155,11 +155,14 @@ function dragDrop(){
 function swapPositions(fromIndex, toIndex){
 
     // Get item in source
-    const srcItem = listItems[fromIndex].querySelector('.draggable').innerText;
+    const srcItem = listItems[fromIndex].querySelector('.draggable');
 
     // Get item in destination
-    const destItem = listItems[toIndex].querySelector('.draggable').innerText;
+    const destItem = listItems[toIndex].querySelector('.draggable');
 
-    console.log(srcItem," with ", destItem);
+    // Swap item positions
+    listItems[fromIndex].appendChild(destItem); // Move destItem to fromIndex
+    listItems[toIndex].appendChild(srcItem); // Move srcItem to toIndex
 
+    
 }
