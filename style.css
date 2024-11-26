@@ -90,3 +90,25 @@ body {
     color: #ff3838;
 
 }
+
+
+
+.draggable {
+    cursor: pointer; /* Change icon */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* distributes child elements horizontally with equal space between them.  
+
+        1. Child Elements Distribution:
+            The first child is aligned to the start of the container.
+            The last child is aligned to the end of the container.
+            All other children are spaced evenly in between.
+            No space is added at the beginning or end of the container.
+
+        2. No Equal Margins on Edges:
+            Unlike space-around or space-evenly, the extra space exists only between the elements, not on the outer edges.
+    
+    */
+    padding: 15px;
+    flex: 1;
+}
