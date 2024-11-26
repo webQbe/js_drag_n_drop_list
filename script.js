@@ -24,7 +24,12 @@ createList(); // Generate list items
 
 function createList(){
     [...richestPeople] // Make a copy of the array without scrambling its order
+     .map(a => ({ value: a, sort: Math.random() })) // Generate a random decimal for each item
+     .sort((a,b) => a.sort - b.sort) // Take random decimal numbers to sort items in ascending order
+     .map(a => a.value) // Get values from shuffled array
      .forEach((person, index) => {
+
+        console.log(person);
 
         // Create <li> element for current person
         const listItem = document.createElement('li');
