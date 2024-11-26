@@ -85,7 +85,7 @@ function addEventListeners(){
 
 function dragStart(){
 
-    // Get current element's data-index
+    // Get start position's data-index
     // To update dragStartIndex
     dragStartIndex = +this // + sign converts string to int
                     .closest('li').getAttribute('data-index'); /* Why .closest() is used:
@@ -101,7 +101,7 @@ function dragStart(){
                     
     console.log(dragStartIndex);
 
-    console.log('Event: ', 'dragstart');
+    // console.log('Event: ', 'dragstart');
 
 }
 
@@ -111,7 +111,7 @@ function dragEnter(){
     // Add .over class to <li> element
     this.classList.add('over');
 
-    console.log('Event: ', 'dragenter')
+    // console.log('Event: ', 'dragenter')
 
 }
 
@@ -123,10 +123,22 @@ function dragLeave(){
     // Remove .over class from <li> element
     this.classList.remove('over');
 
-    console.log('Event: ', 'dragleave')
+    // console.log('Event: ', 'dragleave')
 
 }
 
 
-function dragDrop(){console.log('Event: ', 'drop')}
+function dragDrop(){
+
+    // Get dropped position index
+    const dragEndIndex = +this.getAttribute('data-index');
+
+    // Swap item postions on drop
+    swapPositions(dragStartIndex, dragEndIndex);
+
+    // Remove .over class
+    this.classList.remove('over');
+
+    //console.log('Event: ', 'drop')
+}
 
