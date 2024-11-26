@@ -85,11 +85,23 @@ function addEventListeners(){
 
 function dragStart(){console.log('Event: ', 'dragstart')}
 
-function dragEnter(){console.log('Event: ', 'dragenter')}
+function dragEnter(){
+
+    console.log('Event: ', 'dragenter')
+
+    // Add .over class to <li> element
+    this.classList.add('over');
+}
 
 function dragOver(){console.log('Event: ', 'dragover')}
 
-function dragLeave(){console.log('Event: ', 'dragleave')}
+function dragLeave(){
+
+    console.log('Event: ', 'dragleave')
+
+    // Remove .over class from <li> element
+    this.classList.remove('over');
+}
 
 function dragDrop(){console.log('Event: ', 'drop')}
 
