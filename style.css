@@ -91,6 +91,12 @@ body {
 
 }
 
+/* Set item bg color when dragging over it */
+.draggable-list li.over .draggable {
+
+    background-color: #eaeaea;
+
+}
 
 
 .draggable {

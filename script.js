@@ -32,7 +32,7 @@ function createList(){
         // Create <li> element for current person
         const listItem = document.createElement('li');
 
-        listItem.classList.add('wrong');
+        listItem.classList.add('over');
 
         // Set current index as <li> element's data-index
         listItem.setAttribute('data-index', index);
