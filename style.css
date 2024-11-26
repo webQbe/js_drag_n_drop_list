@@ -24,3 +24,69 @@ body {
     overflow: hidden; /* No scrollbars */
     margin: 0;  /* No margins */
 }
+
+/* Style <ul> lement */
+.draggable-list{
+
+    border: 1px solid var(--background-color);
+    color: var(--text-color);
+    padding: 0; /* No paddings */
+    list-style-type: none; /* No list bullets */
+
+}
+
+/* Style <li> elements */
+.draggable-list li{
+
+    background-color: #fff;
+    display: flex;  /* Makes the <li> a flex container */
+    flex: 1; /* Ensures flexible sizing within a parent flex container 
+    A shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0%;, this property enables the list items to:
+
+        Grow: Expand proportionally to fill available space within the parent container.
+
+        Shrink: Shrink proportionally if there is not enough space in the parent container.
+
+        Basis: Start with an initial width of 0%, making their size completely determined by the available space and their flex-grow and flex-shrink values.*/
+
+}
+
+/* Style border-bottom of all list items except last one */
+.draggable-list li:not(:last-of-type){
+
+    border-bottom: 1px solid var(--border-color);
+
+}
+
+.draggable-list .number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+
+
+.draggable-list .person-name {
+
+    margin: 0 20px 0 0; /* Top-Right-Bottom(20px)-Left */
+     
+}
+
+
+/* Color for correct item */
+.draggable-list li.right .person-name {
+
+    color: #3ae374
+
+}
+
+
+/* Color for wrong item */
+.draggable-list li.right .person-name {
+
+    color: #ff3838;
+
+}
