@@ -52,7 +52,35 @@ function createList(){
         draggable_list.appendChild(listItem);
 
      });
+
+     addEventListeners();
 }
 
 
 
+function addEventListeners(){
+
+    // Select draggable <div> elements
+    const draggables = document.querySelectorAll('.draggable');
+    // Select <li> elements
+    const dragListItems = document.querySelectorAll('.draggable-list li');
+
+    // Loop Through draggables
+    draggables.forEach(draggable => {
+
+        // Listen for dragstart in current draggable <div> 
+        draggable.addEventListener('dragstart', dragStart);
+        
+    });
+
+    // Loop Through dragListItems
+    dragListItems.forEach(item => {
+
+        // Listen for events in current <li> 
+        item.addEventListener('dragover', dragOver);
+        item.addEventListener('drop', dragDrop);
+        item.addEventListener('dragenter', dragEnter);
+        item.addEventListener('dragleave', dragLeave);
+        
+    });
+}
