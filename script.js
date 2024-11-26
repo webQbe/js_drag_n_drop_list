@@ -137,7 +137,8 @@ function dragLeave(){
 function dragDrop(){
 
     // Get dropped position index
-    const dragEndIndex = +this.getAttribute('data-index');
+    const dragEndIndex = +this.getAttribute('data-index'); /* .closest() method is not used in the dragDrop() function because the code already targets the appropriate element (this) on which the drop event is triggered.  
+    Since the required data-index attribute is already on the element itself (e.g., <li data-index="2">), there is no need to navigate up the DOM hierarchy using .closest(). */
 
     // Swap item postions on drop
     swapPositions(dragStartIndex, dragEndIndex);
