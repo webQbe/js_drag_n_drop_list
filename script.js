@@ -29,8 +29,6 @@ function createList(){
      .map(a => a.value) // Get values from shuffled array
      .forEach((person, index) => {
 
-        console.log(person);
-
         // Create <li> element for current person
         const listItem = document.createElement('li');
 

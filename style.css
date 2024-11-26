@@ -1,0 +1,26 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    /* Apply to all elements */
+    box-sizing: border-box; /* Ensures padding and borders are included within the element's specified width and height, making layout calculations more predictable. */
+
+}
+
+/* Define root variables */
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    display: flex; flex-direction: column; /* Align vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align to top */
+    height: 100vh; /* Take full height */
+    overflow: hidden; /* No scrollbars */
+    margin: 0;  /* No margins */
+}
