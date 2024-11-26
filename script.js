@@ -117,7 +117,9 @@ function dragEnter(){
 
 function dragOver(e){
 
-    e.preventDefault(); // Otherwise swapPositions() will not run
+    e.preventDefault();/* Without e.preventDefault() in the dragOver() function:
+    The browser may disallow dropping the dragged item onto the list items (<li>).
+    The dragDrop() function will not execute, preventing the swap operation from occurring. */
 
     //console.log('Event: ', 'dragover')
     
