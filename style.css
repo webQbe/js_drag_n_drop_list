@@ -85,7 +85,7 @@ body {
 
 
 /* Color for wrong item */
-.draggable-list li.right .person-name {
+.draggable-list li.wrong .person-name {
 
     color: #ff3838;
 
