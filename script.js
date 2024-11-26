@@ -115,7 +115,13 @@ function dragEnter(){
 
 }
 
-function dragOver(){console.log('Event: ', 'dragover')}
+function dragOver(e){
+
+    e.preventDefault(); // Otherwise swapPositions() will not run
+
+    //console.log('Event: ', 'dragover')
+    
+}
 
 
 function dragLeave(){
