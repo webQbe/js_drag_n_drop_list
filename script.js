@@ -22,6 +22,7 @@ let dragStartIndex; // Keep track of each list item's index
 
 createList(); // Generate list items
 
+
 function createList(){
     [...richestPeople] // Make a copy of the array without scrambling its order
      .map(a => ({ value: a, sort: Math.random() })) // Generate a random decimal for each item
@@ -53,8 +54,6 @@ function createList(){
 
      addEventListeners();
 }
-
-
 
 function addEventListeners(){
 
@@ -166,3 +165,6 @@ function swapPositions(fromIndex, toIndex){
 
     
 }
+
+// Listen for click event in checkBtn
+checkBtn.addEventListener('click', checkOrder);
