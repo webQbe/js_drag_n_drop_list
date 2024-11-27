@@ -6,12 +6,12 @@ const checkBtn = document.getElementById('check');
 const richestPeople = [
     'Elon Musk',
     'Jeff Bezos',
-    'Larry Ellison ',
-    'Bernard Arnault & Family ',
+    'Larry Ellison',
+    'Bernard Arnault & Family',
     'Mark Zuckerberg',
     'Warren Buffett',
     'Bill Gates',
-    'Larry Page ',
+    'Larry Page',
     'Sergey Brin',
     'Amancio Ortega'
 ];
@@ -168,3 +168,28 @@ function swapPositions(fromIndex, toIndex){
 
 // Listen for click event in checkBtn
 checkBtn.addEventListener('click', checkOrder);
+
+
+function checkOrder(){
+
+    listItems.forEach((listItem, index) => {
+
+        // Get current listItem's inner text
+        const personName = listItem.querySelector('.draggable').innerText
+                           .trim(); // Remove extra whitespace
+
+        if(personName !== richestPeople[index]){
+
+            // If current names in listItem & richestName arrays are not equal
+            listItem.classList.add('wrong'); // Highlight in red
+
+        } else {
+
+            listItem.classList.remove('wrong'); // Remove red color
+            listItem.classList.add('right'); // Highlight in green
+
+        }
+
+    });
+
+}
